@@ -51,6 +51,7 @@ jobs:
         format: golang
         flag-name: run-${{ join(matrix.*, '-') }}
         parallel: true
+        coverage-reporter-version: v0.6.22
       continue-on-error: true
 
   finish:
@@ -63,4 +64,5 @@ jobs:
       with:
         parallel-finished: true
         carryforward: "run-ubuntu-latest,run-macos-latest"
+        coverage-reporter-version: v0.6.22
       continue-on-error: true
